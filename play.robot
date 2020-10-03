@@ -23,25 +23,26 @@ Demo Login Test on ${BROWSER}
 
 *** Keywords ***
 Launch ${BROWSER} Browser
-    [Documentation]                         Launches the specified Browser using playwright.
+    [Documentation]                         Launches the ${BROWSER} Browser using playwright.
     New Browser                             ${BROWSER}        headless=false
     New Context                             viewport={'width': 1920, 'height': 1080}
     New Page                                ${homepage}[url]
 
 Launch Edge Browser
-    [Documentation]                         Launches the specified Browser using playwright.
-    New Browser                             chromium        headless=false      executablePath=%{EDGEBIN}
+    [Documentation]                         Launches the Edge Browser using playwright.
+    New Browser                             chromium         headless=${HEADLESS}       executablePath=%{EDGEBIN}
     New Context                             viewport={'width': 1920, 'height': 1080}
     New Page                                ${homepage}[url]
 
+# TO DO - Not Working!
 Launch 360 Browser
-    [Documentation]                         Launches the specified Browser using playwright.
-    New Browser                             chromium        headless=false      executablePath=%{SEBIN}
+    [Documentation]                         Launches the 360 Browser using playwright.
+    New Browser                             chromium        headless=${HEADLESS}        executablePath=%{SEBIN}
     New Context                             viewport={'width': 1920, 'height': 1080}
     New Page                                ${homepage}[url]
 
 Launch CocCoc Browser
-    [Documentation]                         Launches the specified Browser using playwright.
-    New Browser                             chromium        headless=false      executablePath=%{COCCOCBIN}
+    [Documentation]                         Launches the CocCoc Browser using playwright.
+    New Browser                             chromium        headless=${HEADLESS}        executablePath=%{COCCOCBIN}
     New Context                             viewport={'width': 1920, 'height': 1080}
     New Page                                ${homepage}[url]
