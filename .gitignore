@@ -1,0 +1,13 @@
+# Npm Stuff
+node_modules
+package-lock.json
+
+# Python Virtual env
+venv
+
+# Robotframework output and logs
+*.pino
+*.log
+*.html
+*.xml
+*.txt

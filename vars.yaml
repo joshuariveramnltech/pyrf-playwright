@@ -1,0 +1,10 @@
+homepage:
+   navbar:
+     signin                 : "a[href='/account/login/']"
+   url                      : "http://project-sis-ie.herokuapp.com/"
+
+accountlogin:
+  form:
+    password                : "css= input[name='password']"
+    username                : "css= input[name='username']"
+    submit                  : "css= button[type='submit']"
